@@ -23,10 +23,10 @@ export default function DateField({ placeholder, className = '', ...rest }: Date
           try {
             e.currentTarget.showPicker();
           } catch {
-            // Older browsers: the user can still type the date
+            //
           }
         }}
-        className="w-full bg-input rounded-xl px-4 py-[9px] pr-10 text-base leading-5 text-text-dark placeholder:text-text-dark cursor-pointer [&::-webkit-calendar-picker-indicator]:hidden"
+        className="w-full bg-input rounded-xl px-4 py-2.25 pr-10 text-base leading-5 text-text-dark placeholder:text-gray-text cursor-pointer [&::-webkit-calendar-picker-indicator]:hidden"
         {...rest}
       />
       <img

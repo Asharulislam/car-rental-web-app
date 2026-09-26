@@ -17,7 +17,7 @@ export default function SelectField({
       <select
         defaultValue=""
         aria-label={placeholder}
-        className="w-full appearance-none bg-input rounded-xl px-4 py-[9px] pr-10 text-base leading-5 text-text-dark cursor-pointer"
+        className="w-full appearance-none bg-input rounded-xl px-4 py-[9px] pr-10 text-base leading-5 text-gray-text cursor-pointer"
         {...rest}
       >
         <option value="" disabled>

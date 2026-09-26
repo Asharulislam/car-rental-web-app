@@ -25,7 +25,7 @@ export default function BookingForm({ className = '' }: BookingFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`w-104 bg-white rounded-[20px] p-10 flex flex-col items-center gap-10 text-text-dark ${className}`}
+      className={`w-full max-w-104 bg-white rounded-[20px] p-6 sm:p-10 flex flex-col items-center gap-10 text-text-dark ${className}`}
     >
       <Heading level={2}>{strings.title}</Heading>
 

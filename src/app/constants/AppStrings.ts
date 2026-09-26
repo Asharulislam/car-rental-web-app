@@ -6,6 +6,8 @@ const AppStrings = {
     vehicles: "Vehicles",
     about: "About Us",
     contact: "Contact Us",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
   },
 
   contact: {

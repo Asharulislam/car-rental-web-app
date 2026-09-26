@@ -5,7 +5,7 @@ type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
 };
 
 const sizes = {
-  1: 'text-6xl font-bold',       // 60px — hero title (Figma)
+  1: 'text-4xl md:text-5xl xl:text-6xl font-bold', // 36px phone → 60px desktop (Figma)
   2: 'text-[28px] font-semibold', // 28px — form / card titles (Figma)
   3: 'text-2xl font-semibold',   // 24px — card titles
 };
