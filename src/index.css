@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+  /* Colors (from Figma) */
+  --color-primary: #5937e0;
+  --color-secondary: #ff9e0c;
+  --color-gray-text: #6c757d;
+  --color-text-light: #ffffff;   /* text on dark/coloured backgrounds */
+  --color-text-dark: #000000;    /* normal body text */
+
+  /* Fonts */
   --font-sans: "Work Sans Variable", sans-serif;
   --font-inter: "Inter Variable", sans-serif;
 }
