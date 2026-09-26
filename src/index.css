@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-theme {
+@theme {
   --font-sans: "Work Sans Variable", sans-serif;
   --font-inter: "Inter Variable", sans-serif;
 }

@@ -1,22 +1,22 @@
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/car.svg';
-import phone from '../../assets/phone.svg';
+import AppImages from '../constants/AppImages';
+import AppRoutes from '../constants/AppRoutes';
+import AppStrings from '../constants/AppStrings';
 
 const links = [
-  { to: '/', label: 'Home' },
-  { to: '/vehicles', label: 'Vehicles' },
-  { to: '/vehicles/1', label: 'Details' },
-  { to: '/about', label: 'About Us' },
-  { to: '/contact', label: 'Contact Us' },
+  { to: AppRoutes.home, label: AppStrings.nav.home },
+  { to: AppRoutes.vehicles, label: AppStrings.nav.vehicles },
+  { to: AppRoutes.about, label: AppStrings.nav.about },
+  { to: AppRoutes.contact, label: AppStrings.nav.contact },
 ];
 
 export default function Navbar() {
   return (
     <header className="max-w-[1440px] mx-auto flex items-center justify-between px-[72px] py-7">
       {/* Left: logo */}
-      <Link to="/" className="flex items-center gap-3">
-        <img src={logo} alt="Car Rental" className="size-12" />
-        <span className="font-inter font-bold text-base">Car Rental</span>
+      <Link to={AppRoutes.home} className="flex items-center gap-3">
+        <img src={AppImages.logo} alt={AppStrings.appName} className="size-12" />
+        <span className="font-inter font-bold text-base">{AppStrings.appName}</span>
       </Link>
 
       {/* Middle: menu */}
@@ -38,11 +38,11 @@ export default function Navbar() {
       {/* Right: phone */}
       <div className="flex items-center gap-3">
         <div className="bg-primary rounded-full size-10 flex items-center justify-center">
-          <img src={phone} alt="" className="size-6" />
+          <img src={AppImages.phone} alt="" className="size-6" />
         </div>
         <div className="leading-tight">
-          <p>Need help?</p>
-          <p className="font-semibold">+996 247-1680</p>
+          <p>{AppStrings.contact.needHelp}</p>
+          <p className="font-semibold">{AppStrings.contact.phone}</p>
         </div>
       </div>
     </header>
