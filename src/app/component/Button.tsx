@@ -2,6 +2,7 @@ import type { ButtonHTMLAttributes } from 'react';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'primary' | 'secondary';
+  fullWidth?: boolean;
 };
 
 const variants = {
@@ -11,13 +12,14 @@ const variants = {
 
 export default function Button({
   variant = 'primary',
+  fullWidth = false,
   className = '',
   children,
   ...rest
 }: ButtonProps) {
   return (
     <button
-      className={`font-inter font-semibold text-base px-7 py-3 rounded-xl w-fit cursor-pointer ${variants[variant]} ${className}`}
+      className={`font-inter font-semibold text-base h-10 px-7 rounded-xl flex items-center justify-center cursor-pointer ${fullWidth ? 'w-full' : 'w-fit'} ${variants[variant]} ${className}`}
       {...rest}
     >
       {children}

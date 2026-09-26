@@ -19,6 +19,16 @@ const AppStrings = {
       "Aliquam adipiscing velit semper morbi. Purus non eu cursus porttitor tristique et gravida. Quis nunc interdum gravida ullamcorper",
     viewAllCars: "View all cars",
   },
+
+  bookingForm: {
+    title: "Book your car",
+    carType: "Car type",
+    placeOfRental: "Place of rental",
+    placeOfReturn: "Place of return",
+    rentalDate: "Rental date",
+    returnDate: "Return date",
+    bookNow: "Book now",
+  },
 } as const;
 
 export default AppStrings;

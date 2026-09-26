@@ -7,6 +7,7 @@
   --color-gray-text: #6c757d;
   --color-text-light: #ffffff;   /* text on dark/coloured backgrounds */
   --color-text-dark: #000000;    /* normal body text */
+  --color-input: #fafafa;        /* form field background */
 
   /* Fonts */
   --font-sans: "Work Sans Variable", sans-serif;
