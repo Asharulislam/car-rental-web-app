@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from 'react';
 
 type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
-  level?: 1 | 2 | 3 | 4;
+  level?: 1 | 2 | 3 | 4 | 5;
 };
 
 const sizes = {
@@ -9,6 +9,7 @@ const sizes = {
   2: 'text-3xl md:text-4xl xl:text-[50px] font-bold', // 30px phone → 50px desktop — section titles (Figma)
   3: 'text-[28px] font-semibold',  // 28px — form title (Figma)
   4: 'text-2xl font-semibold',     // 24px — card / feature titles (Figma)
+  5: 'text-xl font-semibold',      // 20px — footer column titles
 };
 
 export default function Heading({

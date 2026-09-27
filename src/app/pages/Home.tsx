@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import type { FormEvent } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import AppImages from "../constants/AppImages";
 import AppLinks from "../constants/AppLinks";
 import AppRoutes from "../constants/AppRoutes";
@@ -26,6 +27,15 @@ const stats = [
 ];
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  // Search by city → open the Vehicles page filtered by that city, e.g. /vehicles?city=london
+  const handleCitySearch = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const city = new FormData(e.currentTarget).get("city")?.toString().trim();
+    navigate(city ? `${AppRoutes.vehicles}?city=${encodeURIComponent(city)}` : AppRoutes.vehicles);
+  };
+
   return (
     <>
       {/* Hero banner */}
@@ -151,6 +161,45 @@ export default function Home() {
             alt={AppStrings.home.downloadApp.phones}
             className="w-64 md:w-80 xl:w-106 shrink-0"
           />
+        </div>
+      </section>
+
+      {/* City search banner */}
+      <section className="max-w-360 mx-auto px-4 md:px-8 xl:px-18 py-15">
+        <div className="relative bg-primary rounded-[20px] overflow-hidden">
+          {/* Same tyre-track image as the facts banner, flipped so the tracks run along the top */}
+          <img
+            src={AppImages.mediumBanner}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-left -scale-y-100"
+          />
+
+          {/* Big car on the right: the logo, darkened (hidden on phone/tablet) */}
+          <img
+            src={AppImages.logo}
+            alt=""
+            className="hidden lg:block absolute right-18 top-1/2 -translate-y-1/2 w-95 brightness-0 opacity-20 pointer-events-none"
+          />
+
+          <div className="relative px-6 py-10 md:px-10 xl:px-23 xl:py-15 max-w-219 text-text-light">
+            <Heading level={2}>{AppStrings.home.citySearch.title}</Heading>
+            <Text className="mt-6 xl:mt-10 max-w-140">{AppStrings.home.citySearch.text}</Text>
+
+            <form
+              onSubmit={handleCitySearch}
+              className="mt-8 xl:mt-10 max-w-124 flex items-center gap-2 bg-white rounded-2xl p-3 pl-6"
+            >
+              <input
+                name="city"
+                placeholder={AppStrings.home.citySearch.placeholder}
+                aria-label={AppStrings.home.citySearch.placeholder}
+                className="flex-1 min-w-0 bg-transparent outline-none font-inter font-medium text-text-dark placeholder:text-gray-text"
+              />
+              <Button type="submit" variant="secondary">
+                {AppStrings.home.citySearch.search}
+              </Button>
+            </form>
+          </div>
         </div>
       </section>
     </>

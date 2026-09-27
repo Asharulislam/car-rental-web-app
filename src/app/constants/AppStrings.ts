@@ -55,6 +55,29 @@ const AppStrings = {
       googlePlay: "Get it on Google Play",
       phones: "Car Rental app on two phones",
     },
+
+    citySearch: {
+      title: "Enjoy every mile with adorable companionship.",
+      text: "Amet cras hac orci lacus. Faucibus ipsum arcu lectus nibh sapien bibendum ullamcorper in. Diam tincidunt tincidunt erat",
+      placeholder: "City",
+      search: "Search",
+    },
+  },
+
+  footer: {
+    about:
+      "Faucibus faucibus pellentesque dictum turpis. Id pellentesque turpis massa a id iaculis lorem turpis euismod.",
+    address: { label: "Address", value: "Oxford Ave. Cary, NC 27511" },
+    email: { label: "Email", value: "nwiger@yahoo.com" },
+    phone: { label: "Phone", value: "+537 547-6401" },
+    usefulLinks: "Useful links",
+    gallery: "Gallery",
+    blog: "Blog",
+    faq: "F.A.Q",
+    vehicles: "Vehicles",
+    vehicleTypes: ["Sedan", "Cabriolet", "Pickup", "Minivan", "SUV"],
+    downloadApp: "Download App",
+    copyright: "Design by Ashar",
   },
 
   carCard: {

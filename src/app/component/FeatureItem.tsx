@@ -14,7 +14,7 @@ export default function FeatureItem({ icon, title, text }: FeatureItemProps) {
       <Heading level={4} className="mt-5">
         {title}
       </Heading>
-      <Text className="mt-7 max-w-[357px] font-inter leading-6">{text}</Text>
+      <Text className="mt-7 max-w-89.25 font-inter leading-6">{text}</Text>
     </div>
   );
 }
