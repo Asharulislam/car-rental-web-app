@@ -1,19 +1,28 @@
-import { Link } from 'react-router-dom';
-import AppImages from '../constants/AppImages';
-import AppRoutes from '../constants/AppRoutes';
-import AppStrings from '../constants/AppStrings';
-import Button from '../component/Button';
-import FeatureItem from '../component/FeatureItem';
-import Heading from '../component/Heading';
-import Text from '../component/Text';
-import BookingForm from '../features/bookings/BookingForm';
-import CarCard from '../features/cars/CarCard';
-import { cars } from '../features/cars/carsData';
+import { Link } from "react-router-dom";
+import AppImages from "../constants/AppImages";
+import AppLinks from "../constants/AppLinks";
+import AppRoutes from "../constants/AppRoutes";
+import AppStrings from "../constants/AppStrings";
+import Button from "../component/Button";
+import FeatureItem from "../component/FeatureItem";
+import Heading from "../component/Heading";
+import StatCard from "../component/StatCard";
+import Text from "../component/Text";
+import BookingForm from "../features/bookings/BookingForm";
+import CarCard from "../features/cars/CarCard";
+import { cars } from "../features/cars/carsData";
 
 const features = [
   { icon: AppImages.location, ...AppStrings.home.features.availability },
   { icon: AppImages.carOutline, ...AppStrings.home.features.comfort },
   { icon: AppImages.wallet, ...AppStrings.home.features.savings },
+];
+
+const stats = [
+  { icon: AppImages.carWhite, ...AppStrings.home.facts.cars },
+  { icon: AppImages.contact, ...AppStrings.home.facts.customers },
+  { icon: AppImages.calendarWhite, ...AppStrings.home.facts.years },
+  { icon: AppImages.speedometer, ...AppStrings.home.facts.miles },
 ];
 
 export default function Home() {
@@ -27,6 +36,12 @@ export default function Home() {
             src={AppImages.banner}
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <img
+            src={AppImages.car}
+            alt=""
+            className="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2 w-90 xl:w-180 object-contain pointer-events-none"
           />
 
           {/* Stacked on phone/tablet, side by side on desktop */}
@@ -59,7 +74,10 @@ export default function Home() {
           <Heading level={2} className="max-w-130">
             {AppStrings.home.chooseCarTitle}
           </Heading>
-          <Link to={AppRoutes.vehicles} className="flex items-center gap-2 text-xl font-bold">
+          <Link
+            to={AppRoutes.vehicles}
+            className="flex items-center gap-2 text-xl font-bold"
+          >
             {AppStrings.home.viewAll}
             <img src={AppImages.arrowRight} alt="" className="size-6" />
           </Link>
@@ -69,6 +87,70 @@ export default function Home() {
           {cars.map((car) => (
             <CarCard key={car.id} car={car} />
           ))}
+        </div>
+      </section>
+
+      {/* Facts in numbers */}
+      <section className="max-w-360 mx-auto px-4 md:px-8 xl:px-18 py-15">
+        <div className="relative bg-primary rounded-[20px] overflow-hidden">
+          {/* Tyre-track banner stretches behind everything */}
+          <img
+            src={AppImages.mediumBanner}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-left"
+          />
+
+          {/* Car sits in the middle, behind the stat cards (hidden on phone) */}
+          <img
+            src={AppImages.greyCar}
+            alt=""
+            className="hidden md:block absolute left-1/2 -translate-x-1/2 top-24 w-[62%] pointer-events-none brightness-0 opacity-20"
+          />
+
+          <div className="relative px-6 py-10 md:px-10 xl:px-18 xl:pt-15 xl:pb-31 text-center">
+            <Heading level={2} className="text-text-light">
+              {AppStrings.home.facts.title}
+            </Heading>
+            <Text className="mt-5 max-w-178 mx-auto text-text-light">
+              {AppStrings.home.facts.text}
+            </Text>
+
+            {/* 1 column on phone, 2 on tablet, 4 on desktop */}
+            <div className="mt-10 md:mt-40 xl:mt-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-16">
+              {stats.map((stat) => (
+                <StatCard key={stat.label} {...stat} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Download mobile app: stacked and centred on phone, side by side on desktop */}
+      <section className="max-w-360 mx-auto px-4 md:px-8 xl:px-18 py-15">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 xl:gap-48">
+          <div className="max-w-134 text-center lg:text-left">
+            <Heading level={2} className="lg:max-w-85">
+              {AppStrings.home.downloadApp.title}
+            </Heading>
+            <Text variant="muted" className="mt-6 lg:mt-10 leading-6">
+              {AppStrings.home.downloadApp.text}
+            </Text>
+
+            <div className="mt-8 lg:mt-15 flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-10">
+              <a href={AppLinks.appStore} target="_blank" rel="noreferrer">
+                <img src={AppImages.appStore} alt={AppStrings.home.downloadApp.appStore} className="h-12.5 w-auto" />
+              </a>
+              <a href={AppLinks.googlePlay} target="_blank" rel="noreferrer">
+                <img src={AppImages.googlePlay} alt={AppStrings.home.downloadApp.googlePlay} className="h-12.5 w-auto" />
+              </a>
+            </div>
+          </div>
+
+          <img
+            src={AppImages.mobileApps}
+            alt={AppStrings.home.downloadApp.phones}
+            className="w-64 md:w-80 xl:w-106 shrink-0"
+          />
         </div>
       </section>
     </>

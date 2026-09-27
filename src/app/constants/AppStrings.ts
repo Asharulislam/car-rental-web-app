@@ -38,6 +38,23 @@ const AppStrings = {
 
     chooseCarTitle: "Choose the car that suits you",
     viewAll: "View All",
+
+    facts: {
+      title: "Facts in numbers",
+      text: "Amet cras hac orci lacus. Faucibus ipsum arcu lectus nibh sapien bibendum ullamcorper in. Diam tincidunt tincidunt erat at semper fermentum",
+      cars: { value: "540+", label: "Cars" },
+      customers: { value: "20k+", label: "Customers" },
+      years: { value: "25+", label: "Years" },
+      miles: { value: "20m+", label: "Miles" },
+    },
+
+    downloadApp: {
+      title: "Download mobile app",
+      text: "Imperdiet ut tristique viverra nunc. Ultrices orci vel auctor cursus turpis nibh placerat massa. Fermentum urna ut at et in. Turpis aliquet cras hendrerit enim condimentum. Condimentum interdum risus bibendum urna",
+      appStore: "Download on the App Store",
+      googlePlay: "Get it on Google Play",
+      phones: "Car Rental app on two phones",
+    },
   },
 
   carCard: {
