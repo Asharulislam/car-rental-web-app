@@ -16,10 +16,15 @@ type BookingFormProps = {
 export default function BookingForm({ className = '' }: BookingFormProps) {
   const strings = AppStrings.bookingForm;
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget));
-    console.log('Booking:', data); // TODO: send to the API
+
+    await fetch('/api/bookings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
   };
 
   return (
@@ -27,7 +32,7 @@ export default function BookingForm({ className = '' }: BookingFormProps) {
       onSubmit={handleSubmit}
       className={`w-full max-w-104 bg-white rounded-[20px] p-6 sm:p-10 flex flex-col items-center gap-10 text-text-dark ${className}`}
     >
-      <Heading level={2}>{strings.title}</Heading>
+      <Heading level={3}>{strings.title}</Heading>
 
       <div className="w-full flex flex-col gap-5">
         <SelectField name="carType" placeholder={strings.carType} options={carTypes} required />

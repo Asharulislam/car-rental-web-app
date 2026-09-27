@@ -20,6 +20,30 @@ const AppStrings = {
     heroText:
       "Aliquam adipiscing velit semper morbi. Purus non eu cursus porttitor tristique et gravida. Quis nunc interdum gravida ullamcorper",
     viewAllCars: "View all cars",
+
+    features: {
+      availability: {
+        title: "Availability",
+        text: "Diam tincidunt tincidunt erat at semper fermentum. Id ultricies quis",
+      },
+      comfort: {
+        title: "Comfort",
+        text: "Gravida auctor fermentum morbi vulputate ac egestas orcietium convallis",
+      },
+      savings: {
+        title: "Savings",
+        text: "Pretium convallis id diam sed commodo vestibulum lobortis volutpat",
+      },
+    },
+
+    chooseCarTitle: "Choose the car that suits you",
+    viewAll: "View All",
+  },
+
+  carCard: {
+    perDay: "per day",
+    airConditioner: "Air Conditioner",
+    viewDetails: "View Details",
   },
 
   bookingForm: {

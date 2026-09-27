@@ -1,0 +1,43 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="1440">
+<g id="Homepage">
+<g id="Info block">
+<g id="Icon+ text">
+<g id="Icon+ text_2">
+<g id="wallet(1) 1" clip-path="url(#clip0_0_1)">
+<g id="g135">
+<g id="g137">
+<g id="Clip path group">
+<mask id="mask0_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+<g id="clipPath143">
+<path id="path141" d="M0 7.62939e-06H64V64H0V7.62939e-06Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_0_1)">
+<g id="g139">
+<g id="g145">
+<path id="path147" d="M51.4912 16.9956V11.99C51.4912 9.23173 49.2551 6.99561 46.4968 6.99561H7.49121C4.72984 6.99561 2.49121 9.23423 2.49121 11.9956C2.49121 14.757 4.72984 16.9956 7.49121 16.9956H56.4968C59.2551 16.9956 61.4912 19.2317 61.4912 21.99V29.4956" stroke="black" stroke-width="4" stroke-miterlimit="10"/>
+</g>
+<g id="g149">
+<path id="path151" d="M61.4912 44.4956V52.0012C61.4912 54.7595 59.2551 56.9956 56.4968 56.9956H7.49121C4.72984 56.9956 2.49121 54.7571 2.49121 51.9956V11.9956" stroke="black" stroke-width="4" stroke-miterlimit="10"/>
+</g>
+<g id="g153">
+<path id="path155" d="M61.4912 44.4956H48.9912C44.8491 44.4956 41.4912 41.1377 41.4912 36.9956C41.4912 32.8535 44.8491 29.4956 48.9912 29.4956H61.4912V44.4956Z" stroke="black" stroke-width="4" stroke-miterlimit="10"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>
