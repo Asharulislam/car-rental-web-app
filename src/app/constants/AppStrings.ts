@@ -93,6 +93,69 @@ const AppStrings = {
     copyright: "Design by Ashar",
   },
 
+  about: {
+    title: "About Us",
+    intro: {
+      title: "Where every drive feels extraordinary",
+      items: [
+        { title: "Variety Brands", text: "Platea non auctor fermentum sollicitudin. Eget adipiscing augue sit quam natoque ornare cursus viverra odio" },
+        { title: "Awesome Suport", text: "Eget adipiscing augue sit quam natoque ornare cursus viverra odio. Diam quam gravida ultricies velit" },
+        { title: "Maximum Freedom", text: "Diam quam gravida ultricies velit duis consequat integer. Est aliquam posuere vel rhoncus massa volutpat in" },
+        { title: "Flexibility On The Go", text: "Vitae pretium nulla sed quam id nisl semper. Vel non in proin egestas dis faucibus rhoncus. Iaculis dignissim aenean pellentesque nisi" },
+      ],
+    },
+    playVideo: "Play video",
+    stats: [
+      { value: "20k+", label: "Happy customers" },
+      { value: "540+", label: "Count of cars" },
+      { value: "25+", label: "Years of experience" },
+    ],
+    memories: {
+      title: "Unlock unforgettable memories on the road",
+      text: "Aliquam adipiscing velit semper morbi. Purus non eu cursus porttitor tristique et gravida. Quis nunc interdum gravida ullamcorper",
+      items: [
+        "Velit semper morbi. Purus non eu cursus porttitor tristique et gravida...",
+        "Purus non eu cursus porttitor tristique et gravida. Quis nunc interdum",
+        "Aliquam adipiscing velit semper morbi. Purus non eu cursus porttitor",
+        "Quis nunc interdum gravida ullamcorper",
+      ],
+    },
+    downloadApp: {
+      label: "Download our app",
+      title: "Download our app",
+      text: "Turpis morbi enim nisi pulvinar leo dui tellus. Faucibus egestas semper diam rutrum dictumst ut donec. Nisi nisi morbi vel in vulputate. Nulla nam eget urna fusce vulputate at risus",
+    },
+    reviews: {
+      title: "Reviews from our customers",
+      items: [
+        { text: "Et aliquet netus at sapien pellentesque mollis nec dignissim maecenas. Amet erat volutpat quisque odio purus feugiat. In gravida neque", company: "Kuphal LLC", name: "Emanuel Boyle" },
+        { text: "Purus consectetur varius quis urna phasellus enim mattis. Sem tincidunt tortor nunc egestas amet adipiscing ligula", company: "Glover - Orn", name: "River Graves" },
+        { text: "Quam neque odio urna euismod felis. Sit egestas magna in quisque famesdapibus quis sapien magna. Nisl non eget sit pellentesque tristique et", company: "Haag LLC", name: "Ryder Malone" },
+      ],
+    },
+    faq: {
+      title: "Top Car Rental Questions",
+      items: [
+        { question: "How does it works?", answer: "Imperdiet ut tristique viverra nunc. Ultrices orci vel auctor cursus turpis nibh placerat massa. Fermentum urna ut at et in. Turpis aliquet cras hendrerit enim condimentum. Condimentum interdum risus bibendum urna. Augue aliquet varius faucibus ut integer tristique ut. Pellentesque id nibh sed nulla non nulla." },
+        { question: "Can I rent a car without a credit card?", answer: "Imperdiet ut tristique viverra nunc. Ultrices orci vel auctor cursus turpis nibh placerat massa. Fermentum urna ut at et in. Turpis aliquet cras hendrerit enim condimentum. Condimentum interdum risus bibendum urna. Augue aliquet varius faucibus ut integer tristique ut. Pellentesque id nibh sed nulla non nulla." },
+        { question: "What are the requirements for renting a car?", answer: "Imperdiet ut tristique viverra nunc. Ultrices orci vel auctor cursus turpis nibh placerat massa. Fermentum urna ut at et in. Turpis aliquet cras hendrerit enim condimentum. Condimentum interdum risus bibendum urna. Augue aliquet varius faucibus ut integer tristique ut. Pellentesque id nibh sed nulla non nulla." },
+        { question: "Does Car Rental allow me to tow with or attach a hitch to the rental vehicle?", answer: "Imperdiet ut tristique viverra nunc. Ultrices orci vel auctor cursus turpis nibh placerat massa. Fermentum urna ut at et in. Turpis aliquet cras hendrerit enim condimentum. Condimentum interdum risus bibendum urna. Augue aliquet varius faucibus ut integer tristique ut. Pellentesque id nibh sed nulla non nulla." },
+        { question: "Does Car Rental offer coverage products for purchase with my rental?", answer: "Imperdiet ut tristique viverra nunc. Ultrices orci vel auctor cursus turpis nibh placerat massa. Fermentum urna ut at et in. Turpis aliquet cras hendrerit enim condimentum. Condimentum interdum risus bibendum urna. Augue aliquet varius faucibus ut integer tristique ut. Pellentesque id nibh sed nulla non nulla." },
+      ],
+    },
+    lookingForCar: {
+      title: "Looking for a car?",
+      text: "Amet cras hac orci lacus. Faucibus ipsum arcu lectus nibh sapien bibendum ullamcorper in...",
+      bookNow: "Book now",
+    },
+  },
+
+  contactPage: {
+    title: "Contact Us",
+    openingHours: { label: "Opening hours", value: "Sun-Mon: 10am - 10pm" },
+    blogTitle: "Latest blog posts & news",
+  },
+
   carDetails: {
     perDay: "/ day",
     technicalSpecification: "Technical Specification",

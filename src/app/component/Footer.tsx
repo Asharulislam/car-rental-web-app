@@ -3,6 +3,7 @@ import AppImages from '../constants/AppImages';
 import AppLinks from '../constants/AppLinks';
 import AppRoutes from '../constants/AppRoutes';
 import AppStrings from '../constants/AppStrings';
+import ContactItem from './ContactItem';
 import Heading from './Heading';
 import Text from './Text';
 
@@ -63,15 +64,7 @@ export default function Footer() {
         </Link>
 
         {contacts.map((contact) => (
-          <div key={contact.label} className="flex items-center gap-3">
-            <div className="size-11 shrink-0 rounded-full bg-secondary flex items-center justify-center">
-              <img src={contact.icon} alt="" className="size-6" />
-            </div>
-            <div>
-              <Text>{contact.label}</Text>
-              <Text className="font-semibold">{contact.value}</Text>
-            </div>
-          </div>
+          <ContactItem key={contact.label} {...contact} />
         ))}
       </div>
 

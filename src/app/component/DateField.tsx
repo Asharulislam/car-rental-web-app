@@ -3,9 +3,10 @@ import AppImages from '../constants/AppImages';
 
 type DateFieldProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> & {
   placeholder: string;
+  tone?: 'light' | 'dark'; // dark = on a purple background
 };
 
-export default function DateField({ placeholder, className = '', ...rest }: DateFieldProps) {
+export default function DateField({ placeholder, tone = 'light', className = '', ...rest }: DateFieldProps) {
   // Shown as a text box (so the placeholder is visible) until the user picks a date
   const [isDate, setIsDate] = useState(false);
 
@@ -26,13 +27,17 @@ export default function DateField({ placeholder, className = '', ...rest }: Date
             //
           }
         }}
-        className="w-full bg-input rounded-xl px-4 py-2.25 pr-10 text-base leading-5 text-text-dark placeholder:text-gray-text cursor-pointer [&::-webkit-calendar-picker-indicator]:hidden"
+        className={`w-full rounded-xl px-4 py-2.25 pr-10 text-base leading-5 cursor-pointer [&::-webkit-calendar-picker-indicator]:hidden ${
+          tone === 'dark'
+            ? 'bg-white/15 text-text-light placeholder:text-text-light/80 [color-scheme:dark]'
+            : 'bg-input text-text-dark placeholder:text-gray-text'
+        }`}
         {...rest}
       />
       <img
         src={AppImages.calendar}
         alt=""
-        className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4"
+        className={`pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 size-4 ${tone === 'dark' ? 'brightness-0 invert' : ''}`}
       />
     </div>
   );

@@ -11,6 +11,7 @@ import carPlaceholder from '../../assets/car-placeholder.png';
 import carWhite from '../../assets/carwhiteIcon.svg';
 import check from '../../assets/check.svg';
 import chevronDown from '../../assets/chevron-down.svg';
+import clockWhite from '../../assets/clock-white.svg';
 import close from '../../assets/close.svg';
 import contact from '../../assets/contact.svg';
 import distance from '../../assets/distance.svg';
@@ -54,6 +55,7 @@ const AppImages = {
   carWhite,
   check,
   chevronDown,
+  clockWhite,
   close,
   contact,
   distance,
