@@ -9,9 +9,12 @@ import car from '../../assets/car.png';
 import carOutline from '../../assets/car-outline.svg';
 import carPlaceholder from '../../assets/car-placeholder.png';
 import carWhite from '../../assets/carwhiteIcon.svg';
+import check from '../../assets/check.svg';
 import chevronDown from '../../assets/chevron-down.svg';
 import close from '../../assets/close.svg';
 import contact from '../../assets/contact.svg';
+import distance from '../../assets/distance.svg';
+import door from '../../assets/door.svg';
 import facebook from '../../assets/facebook.svg';
 import fuel from '../../assets/fuel.svg';
 import gear from '../../assets/gear.svg';
@@ -29,6 +32,7 @@ import mobileApps from '../../assets/MobileApps.png';
 import phone from '../../assets/phone.svg';
 import phoneWhite from '../../assets/phone-white.svg';
 import pickup from '../../assets/pickup.svg';
+import seats from '../../assets/seats.svg';
 import sedan from '../../assets/sedan.svg';
 import speedometer from '../../assets/speedometer.svg';
 import suv from '../../assets/suv.svg';
@@ -48,9 +52,12 @@ const AppImages = {
   carOutline,
   carPlaceholder,
   carWhite,
+  check,
   chevronDown,
   close,
   contact,
+  distance,
+  door,
   facebook,
   fuel,
   gear,
@@ -68,6 +75,7 @@ const AppImages = {
   phone,
   phoneWhite,
   pickup,
+  seats,
   sedan,
   speedometer,
   suv,

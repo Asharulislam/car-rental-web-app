@@ -1,4 +1,6 @@
+import { generatePath, useNavigate } from 'react-router-dom';
 import AppImages from '../../constants/AppImages';
+import AppRoutes from '../../constants/AppRoutes';
 import AppStrings from '../../constants/AppStrings';
 import Button from '../../component/Button';
 import Heading from '../../component/Heading';
@@ -10,6 +12,7 @@ type CarCardProps = {
 };
 
 export default function CarCard({ car }: CarCardProps) {
+  const navigate = useNavigate();
   const specs = [
     { icon: AppImages.gear, label: car.transmission },
     { icon: AppImages.fuel, label: car.fuel },
@@ -48,7 +51,8 @@ export default function CarCard({ car }: CarCardProps) {
         </div>
       </div>
 
-      <Button size="lg" fullWidth>
+      {/* generatePath fills in :id → /vehicles/3 */}
+      <Button size="lg" fullWidth onClick={() => navigate(generatePath(AppRoutes.carDetails, { id: String(car.id) }))}>
         {AppStrings.carCard.viewDetails}
       </Button>
     </article>

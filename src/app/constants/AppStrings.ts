@@ -93,6 +93,24 @@ const AppStrings = {
     copyright: "Design by Ashar",
   },
 
+  carDetails: {
+    perDay: "/ day",
+    technicalSpecification: "Technical Specification",
+    gearBox: "Gear Box",
+    fuel: "Fuel",
+    doors: "Doors",
+    airConditioner: "Air Conditioner",
+    seats: "Seats",
+    distance: "Distance",
+    yes: "Yes",
+    no: "No",
+    rentACar: "Rent a car",
+    carEquipment: "Car Equipment",
+    otherCars: "Other cars",
+    notFound: "Sorry, we couldn't find this car.",
+    showImage: "Show image",
+  },
+
   carCard: {
     perDay: "per day",
     airConditioner: "Air Conditioner",
