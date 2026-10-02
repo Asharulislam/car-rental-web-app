@@ -26,7 +26,7 @@ const stats = [
   { icon: AppImages.speedometer, ...AppStrings.home.facts.miles },
 ];
 
-export default function Home() {
+export default function Home () {
   const navigate = useNavigate();
 
   // Search by city → open the Vehicles page filtered by that city, e.g. /vehicles?city=london

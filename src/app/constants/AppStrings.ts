@@ -64,6 +64,10 @@ const AppStrings = {
     },
   },
 
+  vehicles: {
+    selectVehicle: "Select a vehicle group",
+  },
+
   footer: {
     about:
       "Faucibus faucibus pellentesque dictum turpis. Id pellentesque turpis massa a id iaculis lorem turpis euismod.",
