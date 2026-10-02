@@ -2,6 +2,7 @@ import airConditioner from '../../assets/air-conditioner.svg';
 import appStore from '../../assets/App Store.png';
 import arrowRight from '../../assets/arrow-right.svg';
 import banner from '../../assets/banner.png';
+import cabriolet from '../../assets/cabriolet.svg';
 import calendar from '../../assets/calendar.svg';
 import calendarWhite from '../../assets/calendar_white.svg';
 import car from '../../assets/car.png';
@@ -23,10 +24,14 @@ import logo from '../../assets/car.svg';
 import mailWhite from '../../assets/mail-white.svg';
 import mediumBanner from '../../assets/medium_banner.png';
 import menu from '../../assets/menu.svg';
+import minivan from '../../assets/minivan.svg';
 import mobileApps from '../../assets/MobileApps.png';
 import phone from '../../assets/phone.svg';
 import phoneWhite from '../../assets/phone-white.svg';
+import pickup from '../../assets/pickup.svg';
+import sedan from '../../assets/sedan.svg';
 import speedometer from '../../assets/speedometer.svg';
+import suv from '../../assets/suv.svg';
 import wallet from '../../assets/wallet.svg';
 import x from '../../assets/x.svg';
 import youtube from '../../assets/youtube.svg';
@@ -36,6 +41,7 @@ const AppImages = {
   appStore,
   arrowRight,
   banner,
+  cabriolet,
   calendar,
   calendarWhite,
   car,
@@ -57,10 +63,14 @@ const AppImages = {
   mailWhite,
   mediumBanner,
   menu,
+  minivan,
   mobileApps,
   phone,
   phoneWhite,
+  pickup,
+  sedan,
   speedometer,
+  suv,
   wallet,
   x,
   youtube,

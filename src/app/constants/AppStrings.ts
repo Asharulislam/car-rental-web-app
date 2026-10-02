@@ -66,6 +66,15 @@ const AppStrings = {
 
   vehicles: {
     selectVehicle: "Select a vehicle group",
+    allVehicles: "All vehicles",
+    noCars: "No cars in this group yet.",
+    types: {
+      sedan: "Sedan",
+      cabriolet: "Cabriolet",
+      pickup: "Pickup",
+      suv: "Suv",
+      minivan: "Minivan",
+    },
   },
 
   footer: {
