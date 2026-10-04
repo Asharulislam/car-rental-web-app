@@ -4,6 +4,7 @@
 import { cars as sampleCars, type Car } from '../features/cars/carsData';
 import { ApiError } from './api';
 import type { CarInput } from './carsService';
+import { sampleBookings, samplePayments } from './mockBookingsData';
 
 export const DEMO_USERNAME = 'admin';
 export const DEMO_PASSWORD = 'admin123';
@@ -79,4 +80,29 @@ export function mockUploadImage(file: File): Promise<string> {
     img.onerror = () => reject(new Error('Could not read image'));
     img.src = URL.createObjectURL(file);
   });
+}
+
+// Bookings & payments (read-only sample data)
+export async function mockGetBookings() {
+  await wait();
+  return sampleBookings;
+}
+
+export async function mockGetBooking(id: string) {
+  await wait();
+  const booking = sampleBookings.find((b) => String(b.id) === id);
+  if (!booking) throw new ApiError(404, 'Booking not found');
+  return booking;
+}
+
+export async function mockGetPayments() {
+  await wait();
+  return samplePayments;
+}
+
+export async function mockGetPayment(id: string) {
+  await wait();
+  const payment = samplePayments.find((p) => String(p.id) === id);
+  if (!payment) throw new ApiError(404, 'Payment not found');
+  return payment;
 }

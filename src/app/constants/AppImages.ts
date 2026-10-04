@@ -33,6 +33,7 @@ import mobileApps from '../../assets/MobileApps.png';
 import phone from '../../assets/phone.svg';
 import phoneWhite from '../../assets/phone-white.svg';
 import pickup from '../../assets/pickup.svg';
+import search from '../../assets/search.svg';
 import seats from '../../assets/seats.svg';
 import sedan from '../../assets/sedan.svg';
 import speedometer from '../../assets/speedometer.svg';
@@ -77,6 +78,7 @@ const AppImages = {
   phone,
   phoneWhite,
   pickup,
+  search,
   seats,
   sedan,
   speedometer,

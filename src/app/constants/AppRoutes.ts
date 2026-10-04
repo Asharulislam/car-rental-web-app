@@ -13,6 +13,10 @@ const AppRoutes = {
   admin: '/admin',
   adminNewCar: '/admin/cars/new',
   adminEditCar: '/admin/cars/:id/edit',
+  adminBookings: '/admin/bookings',
+  adminBookingDetails: '/admin/bookings/:id',
+  adminPayments: '/admin/payments',
+  adminPaymentDetails: '/admin/payments/:id',
 } as const;
 
 export default AppRoutes;

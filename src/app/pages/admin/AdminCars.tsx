@@ -1,20 +1,27 @@
 import { useEffect, useState } from "react";
 import { generatePath, Link, useNavigate } from "react-router-dom";
 import Button from "../../component/Button";
+import FilterPill from "../../component/FilterPill";
 import Heading from "../../component/Heading";
 import Text from "../../component/Text";
+import SearchInput from "../../component/admin/SearchInput";
 import AppRoutes from "../../constants/AppRoutes";
 import AppStrings from "../../constants/AppStrings";
 import type { Car } from "../../features/cars/carsData";
+import { vehicleTypes } from "../../features/cars/vehicleTypes";
 import { deleteCar, getCars } from "../../services/carsService";
+import { matchesSearch } from "../../utils/search";
 
 const strings = AppStrings.admin.cars;
+const common = AppStrings.admin.common;
 
 export default function AdminCars() {
   const navigate = useNavigate();
   const [cars, setCars] = useState<Car[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
+  const [search, setSearch] = useState("");
+  const [type, setType] = useState(""); // "" = all types
 
   // Load the cars once, when the page opens
   useEffect(() => {
@@ -34,6 +41,11 @@ export default function AdminCars() {
     }
   };
 
+  // Search and type filter work together
+  const visible = cars.filter(
+    (car) => (!type || car.type.toLowerCase() === type) && matchesSearch(search, car.brand, car.type),
+  );
+
   const editPath = (id: number) => generatePath(AppRoutes.adminEditCar, { id: String(id) });
 
   return (
@@ -45,14 +57,28 @@ export default function AdminCars() {
         </Button>
       </div>
 
-      <div className="mt-8 bg-white rounded-[20px] overflow-hidden">
+      {/* Search + type filter */}
+      <div className="mt-6 flex flex-col gap-4">
+        <SearchInput value={search} onChange={setSearch} placeholder={strings.search} />
+        <div className="flex flex-wrap gap-2">
+          <FilterPill size="sm" label={common.all} isActive={type === ""} onClick={() => setType("")} />
+          {vehicleTypes.map((t) => (
+            <FilterPill key={t.id} size="sm" label={t.label} isActive={type === t.id} onClick={() => setType(t.id)} />
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-6 bg-white rounded-[20px] overflow-hidden">
         {isLoading && <Text variant="muted" className="p-8 text-center">{strings.loading}</Text>}
-        {error && <Text className="p-8 text-center text-red-600">{error}</Text>}
+        {error && <Text className="p-8 text-center text-danger">{error}</Text>}
         {!isLoading && !error && cars.length === 0 && (
           <Text variant="muted" className="p-8 text-center">{strings.empty}</Text>
         )}
+        {cars.length > 0 && visible.length === 0 && (
+          <Text variant="muted" className="p-8 text-center">{common.noResults}</Text>
+        )}
 
-        {cars.length > 0 && (
+        {visible.length > 0 && (
           // Scrolls sideways on small screens instead of squashing the columns
           <div className="overflow-x-auto">
             <table className="w-full min-w-160 text-left">
@@ -66,7 +92,7 @@ export default function AdminCars() {
                 </tr>
               </thead>
               <tbody>
-                {cars.map((car) => (
+                {visible.map((car) => (
                   <tr key={car.id} className="border-t border-text-dark/10">
                     <td className="px-6 py-3">
                       <img src={car.image} alt="" className="w-24 h-14 object-contain rounded-lg bg-surface" />

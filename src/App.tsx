@@ -10,6 +10,10 @@ import Contact from "./app/pages/Contact";
 import AdminLogin from "./app/pages/admin/AdminLogin";
 import AdminCars from "./app/pages/admin/AdminCars";
 import AdminCarForm from "./app/pages/admin/AdminCarForm";
+import AdminBookings from "./app/pages/admin/AdminBookings";
+import AdminBookingDetails from "./app/pages/admin/AdminBookingDetails";
+import AdminPayments from "./app/pages/admin/AdminPayments";
+import AdminPaymentDetails from "./app/pages/admin/AdminPaymentDetails";
 import AppRoutes from "./app/constants/AppRoutes";
 
 export default function App() {
@@ -36,6 +40,10 @@ export default function App() {
         <Route path={AppRoutes.admin} element={<AdminCars />} />
         <Route path={AppRoutes.adminNewCar} element={<AdminCarForm />} />
         <Route path={AppRoutes.adminEditCar} element={<AdminCarForm />} />
+        <Route path={AppRoutes.adminBookings} element={<AdminBookings />} />
+        <Route path={AppRoutes.adminBookingDetails} element={<AdminBookingDetails />} />
+        <Route path={AppRoutes.adminPayments} element={<AdminPayments />} />
+        <Route path={AppRoutes.adminPaymentDetails} element={<AdminPaymentDetails />} />
       </Route>
     </Routes>
   );

@@ -9,6 +9,8 @@
   --color-text-dark: #000000;    /* normal body text */
   --color-input: #fafafa;        /* form field background */
   --color-surface: #fafafa;      /* card background */
+  --color-success: #16a34a;      /* status: paid, confirmed */
+  --color-danger: #dc2626;       /* status: failed, cancelled, errors */
 
   /* Fonts */
   --font-sans: "Work Sans Variable", sans-serif;
