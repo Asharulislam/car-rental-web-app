@@ -189,6 +189,62 @@ const AppStrings = {
     returnDate: "Return date",
     bookNow: "Book now",
   },
+
+  admin: {
+    panelTitle: "Admin Panel",
+    viewSite: "View site",
+    logout: "Log out",
+
+    login: {
+      title: "Admin login",
+      subtitle: "Sign in to manage cars",
+      username: "Admin ID",
+      password: "Password",
+      submit: "Log in",
+      loading: "Logging in...",
+      failed: "Wrong ID or password.",
+      demoHint: "Demo mode — log in with",
+    },
+
+    cars: {
+      title: "Cars",
+      addCar: "Add car",
+      empty: "No cars yet. Add your first car.",
+      loading: "Loading cars...",
+      loadFailed: "Couldn't load cars. Is the API running?",
+      edit: "Edit",
+      delete: "Delete",
+      confirmDelete: "Delete this car? This can't be undone.",
+      deleteFailed: "Couldn't delete the car.",
+      columns: { image: "Image", car: "Car", type: "Type", price: "Price / day", actions: "Actions" },
+    },
+
+    carForm: {
+      newTitle: "Add car",
+      editTitle: "Edit car",
+      brand: "Brand",
+      type: "Type",
+      chooseType: "Choose a type",
+      pricePerDay: "Price per day ($)",
+      transmission: "Gear box",
+      fuel: "Fuel",
+      doors: "Doors",
+      seats: "Seats",
+      distance: "Distance (km)",
+      airConditioner: "Air conditioner",
+      equipment: "Equipment",
+      equipmentHint: "Separate with commas, e.g. ABS, Air Bags, Cruise Control",
+      image: "Main image",
+      gallery: "Gallery images",
+      galleryHint: "Optional. You can pick several images.",
+      keepImageHint: "Leave empty to keep the current image.",
+      save: "Save car",
+      saving: "Saving...",
+      cancel: "Cancel",
+      saveFailed: "Couldn't save the car. Please try again.",
+      notFound: "Car not found.",
+    },
+  },
 } as const;
 
 export default AppStrings;

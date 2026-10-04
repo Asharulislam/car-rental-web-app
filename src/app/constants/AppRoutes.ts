@@ -7,6 +7,12 @@ const AppRoutes = {
   gallery: '/gallery',
   blog: '/blog',
   faq: '/faq',
+
+  // Admin panel (no Navbar/Footer)
+  adminLogin: '/admin/login',
+  admin: '/admin',
+  adminNewCar: '/admin/cars/new',
+  adminEditCar: '/admin/cars/:id/edit',
 } as const;
 
 export default AppRoutes;
